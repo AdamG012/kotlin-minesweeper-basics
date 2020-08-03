@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MineSweeper</string>
+    <string name="play">Play</string>
+    <string name="appbar_scrolling_view_behavior">view</string>
+    <string name="mineSweeperFragment">MineSweeperFragment</string>
+    <string name="mainFragment">mainFragment</string>
+    <string name="scoreFragment">ScoreFragment</string>
+    <string name="back">Back</string>
+    <string name="mineSweeperMenu">MineSweeperMenu</string>
+    <string name="small">SMALL</string>
+    <string name="medium">MEDIUM</string>
+    <string name="large">LARGE</string>
+    <string name="game_over">Game Over</string>
+    <string name="image">image</string>
+    <string name="_0">0</string>
+    <string name="score">Score</string>
+    <string name="timer">Timer</string>
+    <string name="winMsg">You Win!</string>
+    <string name="loseMsg">You Lose!</string>
+    <string name="minesweeper">MineSweeper</string>
+    <string name="infoMessage">The aim of the game is to reveal every block without detonating any bombs. Each non-bomb block when revealed displays then number of bombs that it is directly adjacent to.
+        <b>Hold on a block</b> to reveal a bomb.
+        <b>Tap on a block</b> to either flag or mark as unknown.</string>
+
+</resources>

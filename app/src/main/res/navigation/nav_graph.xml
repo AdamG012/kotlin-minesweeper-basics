@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.example.minesweeper.MainFragment"
+        android:label="@string/mainFragment"
+        tools:layout="@layout/main_menu">
+
+        <action
+            android:id="@+id/action_MainMenuFragment_to_MineSweeperFragment"
+            app:destination="@id/MineSweeperFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MineSweeperFragment"
+        android:name="com.example.minesweeper.MineSweeperFragment"
+        android:label="@string/mineSweeperFragment"
+        tools:layout="@layout/minesweeper_fragment">
+
+        <action
+            android:id="@+id/action_MineSweeperFragment_to_MainMenuFragment"
+            app:destination="@id/MainFragment" />
+        <argument
+            android:name="gameSize"
+            app:argType="string"
+            android:defaultValue="SMALL" />
+        <action
+            android:id="@+id/action_MineSweeperFragment_to_ScoreFragment"
+            app:destination="@id/ScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ScoreFragment"
+        android:name="com.example.minesweeper.ScoreFragment"
+        android:label="@string/scoreFragment"
+        tools:layout="@layout/game_over_screen">
+
+        <action
+            android:id="@+id/action_ScoreFragment_to_MainMenuFragment"
+            app:destination="@id/MainFragment" />
+        <argument
+            android:name="wonGame"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="numRevealed"
+            app:argType="integer"
+         android:defaultValue="0" />
+    </fragment>
+</navigation>
