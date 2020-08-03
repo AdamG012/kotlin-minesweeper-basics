@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 
 class ScoreFragment : Fragment() {
+
     // The media player
     private lateinit var player: MediaPlayer
 
@@ -28,6 +29,11 @@ class ScoreFragment : Fragment() {
     // The argument collector given from the minesweeper fragment
     private val args: ScoreFragmentArgs by navArgs()
 
+
+    /**
+     * Add navigation back to the main menu as well as playing the correct winning and losing sound files
+     * This is dependent on whether the player won or lost, and will also update the image view accordingly.
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -71,6 +77,7 @@ class ScoreFragment : Fragment() {
     private fun stop() {
         player.release()
     }
+
 
     /**
      * When the app is closed ensure that all media is closed as well

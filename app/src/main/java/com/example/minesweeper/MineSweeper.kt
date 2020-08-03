@@ -1,4 +1,4 @@
-package com.example.minesweeper;
+package com.example.minesweeper
 
 
 import android.media.MediaPlayer
@@ -17,12 +17,14 @@ class MineSweeper(private val gameState: GameState, private val player: MediaPla
     // The number of non bomb blocks revealed
     private var numRevealed = 0
 
+
     /**
      * Initialise the game by calling the grid to setup
      */
     fun initGame() {
         grid.setup()
     }
+
 
     /**
      * Create grid using complete block list
@@ -60,6 +62,7 @@ class MineSweeper(private val gameState: GameState, private val player: MediaPla
         }
     }
 
+
     /**
      * Change the state of the block when hold click
      */
@@ -92,7 +95,6 @@ class MineSweeper(private val gameState: GameState, private val player: MediaPla
 
         // If the block is a bomb then call the game over method
         if (block.isBomb) {
-            Toast.makeText(view.context, "Game Over", Toast.LENGTH_SHORT).show()
             gameOver(view, false)
             return
         }
@@ -105,7 +107,6 @@ class MineSweeper(private val gameState: GameState, private val player: MediaPla
 
         // Check if the user has won if so call the game over method
         if (checkWon()) {
-            Toast.makeText(view.context, "You Win, Congratulations", Toast.LENGTH_SHORT).show()
             gameOver(view, true)
             return
         }

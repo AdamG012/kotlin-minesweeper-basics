@@ -7,12 +7,18 @@ import android.widget.TextView
 
 class Block(var x: Int, var y: Int, private var id: Int) {
 
+    // Param to check whether the Block is a bomb or not
     var isBomb: Boolean = false
+
+    // Number of bombs adjacent to this block
     var numBombs: Int = 0
+
+    // The Button drawable object
     lateinit var button: Button
 
     // State object of the block
     private var state = BlockState.UNCHECKED
+
 
     /**
      * Change the state of the block to the next one when clicked
@@ -70,6 +76,10 @@ class Block(var x: Int, var y: Int, private var id: Int) {
         displayText()
     }
 
+
+    /**
+     * Getter for the block state
+     */
     fun getState(): BlockState {
         return this.state
     }

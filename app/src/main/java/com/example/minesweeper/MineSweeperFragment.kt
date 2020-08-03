@@ -25,8 +25,16 @@ class MineSweeperFragment : Fragment() {
         return inflater.inflate(R.layout.minesweeper_fragment, container, false)
     }
 
+
+    // The arguments passed by the main fragment
     private val args: MineSweeperFragmentArgs by navArgs()
 
+
+    /**
+     * When the view is created add navigation back to the main menu.
+     * Also on this fragment initialise the MineSweeper object and create the grid.
+     * Begin playing sound file which is Megalovania - Undertale which is owned and produced by 'Toby "Radiation" Fox'
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

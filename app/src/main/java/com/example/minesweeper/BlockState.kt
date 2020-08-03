@@ -1,6 +1,6 @@
 package com.example.minesweeper
 
-/*
+/**
  * Enum BlockState to cycle through states of the blocks
  */
 enum class BlockState(
